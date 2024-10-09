@@ -38,5 +38,29 @@ namespace F24Week6MidtermReview
             lblInput2.Content = "Gross Sales";
             lblInput3.Content = "Commission Rate";
         }
+
+        private void btnCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            string name = txtName.Text;
+
+            if (rdoHourly.IsChecked == true)
+            {
+                int hours = int.Parse(txtInput2.Text);
+                double wage = double.Parse(txtInput3.Text);
+
+                _emp = new HourlyEmployee(name, hours, wage);
+            }
+            else
+            {
+                double grossSales = double.Parse(txtInput2.Text);
+                double commissionRate = double.Parse(txtInput3.Text);
+
+                _emp = new CommissionEmployee(name, grossSales, commissionRate);
+            }
+
+            txtGrossEarnings.Text = _emp.GrossEarnings().ToString("C");
+            txtTax.Text = _emp.Tax().ToString("C");
+            txtNetEarnings.Text = _emp.NetEarnings().ToString("C");
+        }
     }
 }

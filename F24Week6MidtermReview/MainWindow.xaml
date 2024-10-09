@@ -28,7 +28,7 @@
             </Canvas>
         </GroupBox>
 
-        <Button x:Name="btnCalculate" Content="Calculate" Canvas.Left="579" Canvas.Top="133" IsDefault="True" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="btnCalculate" Content="Calculate" Canvas.Left="579" Canvas.Top="133" IsDefault="True" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnCalculate_Click"/>
         <Button x:Name="btnClear" Content="Clear" Canvas.Left="579" Canvas.Top="178" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button x:Name="btnClose" Content="Close" Canvas.Left="579" Canvas.Top="223" Height="30" Width="84" IsCancel="True" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
