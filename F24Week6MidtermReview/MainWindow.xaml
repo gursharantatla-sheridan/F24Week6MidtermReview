@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
         <Label Content="Employees:" Canvas.Left="140" Canvas.Top="55" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <ListBox x:Name="lstEmployees" Height="305" Width="118" Canvas.Left="140" Canvas.Top="81" HorizontalAlignment="Center" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lstEmployees" Height="305" Width="118" Canvas.Left="140" Canvas.Top="81" HorizontalAlignment="Center" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lstEmployees_SelectionChanged"/>
 
         <GroupBox x:Name="grpEmployeeType" Height="58" Header="Select Type of Employee" Width="278" Canvas.Left="284" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Canvas>
@@ -29,8 +29,8 @@
         </GroupBox>
 
         <Button x:Name="btnCalculate" Content="Calculate" Canvas.Left="579" Canvas.Top="133" IsDefault="True" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnCalculate_Click"/>
-        <Button x:Name="btnClear" Content="Clear" Canvas.Left="579" Canvas.Top="178" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button x:Name="btnClose" Content="Close" Canvas.Left="579" Canvas.Top="223" Height="30" Width="84" IsCancel="True" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="btnClear" Content="Clear" Canvas.Left="579" Canvas.Top="178" Height="30" Width="84" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnClear_Click"/>
+        <Button x:Name="btnClose" Content="Close" Canvas.Left="579" Canvas.Top="223" Height="30" Width="84" IsCancel="True" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnClose_Click"/>
 
         <GroupBox x:Name="grpCalculatedWage" Height="128" Header="Calculated Wage" Width="379" Canvas.Left="284" Canvas.Top="258" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Canvas>
