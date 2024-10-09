@@ -16,9 +16,27 @@ namespace F24Week6MidtermReview
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Employee _emp;
+        private List<Employee> _employees;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            _employees = new List<Employee>();
+            rdoHourly.IsChecked = true;
+        }
+
+        private void rdoHourly_Checked(object sender, RoutedEventArgs e)
+        {
+            lblInput2.Content = "Hours Worked";
+            lblInput3.Content = "Hourly Wage";
+        }
+
+        private void rdoCommission_Checked(object sender, RoutedEventArgs e)
+        {
+            lblInput2.Content = "Gross Sales";
+            lblInput3.Content = "Commission Rate";
         }
     }
 }
